@@ -481,6 +481,86 @@
     text-transform: uppercase;
   }
 
+  /* ── CASOS DE ÉXITO ── */
+  #casos { border-top: 1px solid var(--border); }
+
+  .casos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .caso-card {
+    background: var(--bg2);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: border-color 0.2s, transform 0.2s;
+  }
+
+  .caso-card:hover {
+    border-color: rgba(255,255,255,0.2);
+    transform: translateY(-3px);
+  }
+
+  .caso-img {
+    width: 100%;
+    aspect-ratio: 4/3;
+    object-fit: cover;
+    display: block;
+  }
+
+  .caso-placeholder {
+    width: 100%;
+    aspect-ratio: 4/3;
+    background: var(--bg3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+  }
+
+  .caso-placeholder svg {
+    width: 32px; height: 32px;
+    stroke: var(--muted);
+    fill: none;
+    stroke-width: 1.2;
+    opacity: 0.4;
+  }
+
+  .caso-placeholder span {
+    font-size: 0.7rem;
+    color: var(--muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+
+  .caso-info {
+    padding: 1rem 1.25rem;
+  }
+
+  .caso-cliente {
+    font-size: 0.65rem;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.3rem;
+  }
+
+  .caso-titulo {
+    font-size: 0.95rem;
+    font-weight: 700;
+    margin-bottom: 0.3rem;
+  }
+
+  .caso-desc {
+    font-size: 0.78rem;
+    color: var(--muted);
+    line-height: 1.5;
+  }
+
   /* ── PAYMENT METHODS ── */
   .pay-header { margin-bottom: 3rem; }
 
@@ -684,7 +764,7 @@
 
       <div class="hero-actions">
         <a href="#works" class="btn-primary">Ver trabajos</a>
-        <a href="#contact" class="btn-outline">Contactar</a>
+        <a href="#casos" class="btn-outline">Casos de éxito</a>
       </div>
 
       <div class="hero-tools" style="position:static; margin-top:2rem;">
@@ -807,6 +887,93 @@
   </div>
 </section>
 
+<!-- CASOS DE ÉXITO -->
+<section id="casos">
+  <div class="works-header">
+    <div>
+      <p class="section-label">Resultados</p>
+      <h2 class="section-title">Casos de éxito</h2>
+      <p class="section-sub">Resultados reales con clientes reales. Cada proyecto con métricas que hablan solas.</p>
+    </div>
+  </div>
+
+  <div class="casos-grid">
+
+    <div class="caso-card">
+      <div class="caso-placeholder">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Subí tu foto aquí</span>
+      </div>
+      <div class="caso-info">
+        <p class="caso-cliente">Cliente</p>
+        <p class="caso-titulo">Título del caso</p>
+        <p class="caso-desc">Descripción del resultado obtenido con este cliente.</p>
+      </div>
+    </div>
+
+    <div class="caso-card">
+      <div class="caso-placeholder">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Subí tu foto aquí</span>
+      </div>
+      <div class="caso-info">
+        <p class="caso-cliente">Cliente</p>
+        <p class="caso-titulo">Título del caso</p>
+        <p class="caso-desc">Descripción del resultado obtenido con este cliente.</p>
+      </div>
+    </div>
+
+    <div class="caso-card">
+      <div class="caso-placeholder">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Subí tu foto aquí</span>
+      </div>
+      <div class="caso-info">
+        <p class="caso-cliente">Cliente</p>
+        <p class="caso-titulo">Título del caso</p>
+        <p class="caso-desc">Descripción del resultado obtenido con este cliente.</p>
+      </div>
+    </div>
+
+    <div class="caso-card">
+      <div class="caso-placeholder">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Subí tu foto aquí</span>
+      </div>
+      <div class="caso-info">
+        <p class="caso-cliente">Cliente</p>
+        <p class="caso-titulo">Título del caso</p>
+        <p class="caso-desc">Descripción del resultado obtenido con este cliente.</p>
+      </div>
+    </div>
+
+    <div class="caso-card">
+      <div class="caso-placeholder">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Subí tu foto aquí</span>
+      </div>
+      <div class="caso-info">
+        <p class="caso-cliente">Cliente</p>
+        <p class="caso-titulo">Título del caso</p>
+        <p class="caso-desc">Descripción del resultado obtenido con este cliente.</p>
+      </div>
+    </div>
+
+    <div class="caso-card">
+      <div class="caso-placeholder">
+        <svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+        <span>Subí tu foto aquí</span>
+      </div>
+      <div class="caso-info">
+        <p class="caso-cliente">Cliente</p>
+        <p class="caso-titulo">Título del caso</p>
+        <p class="caso-desc">Descripción del resultado obtenido con este cliente.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
 <!-- PAYMENT METHODS -->
 <section id="contact">
   <div class="pay-header">
@@ -916,6 +1083,7 @@
   <ul class="footer-links">
     <li><a href="#">Inicio</a></li>
     <li><a href="#works">Trabajos</a></li>
+    <li><a href="#casos">Casos de éxito</a></li>
     <li><a href="contacto.html">Hablemos</a></li>
   </ul>
   <p class="footer-copy">© 2025. Todos los derechos reservados.</p>
