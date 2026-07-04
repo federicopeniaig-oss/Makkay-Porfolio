@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hablemos — Makkay</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;900&display=swap');
+
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg: #0a0a0a;
+    --bg2: #111111;
+    --bg3: #1a1a1a;
+    --text: #f0f0f0;
+    --muted: #888;
+    --accent: #e8ff47;
+    --border: rgba(255,255,255,0.08);
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* NAV */
+  nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 2.5rem;
+    border-bottom: 1px solid var(--border);
+  }
+
+  .nav-logo {
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .dot {
+    width: 8px; height: 8px;
+    background: var(--accent);
+    border-radius: 50%;
+    display: inline-block;
+  }
+
+  /* MAIN */
+  main {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 4rem 2rem;
+    text-align: center;
+  }
+
+  .page-label {
+    font-size: 0.7rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 1.5rem;
+  }
+
+  .page-title {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+    font-weight: 900;
+    letter-spacing: -0.04em;
+    line-height: 1;
+    text-transform: uppercase;
+    margin-bottom: 1rem;
+    color: var(--accent);
+  }
+
+  .page-title em {
+    font-style: normal;
+    color: var(--accent);
+  }
+
+  .page-sub {
+    font-size: 1rem;
+    color: var(--muted);
+    max-width: 400px;
+    line-height: 1.7;
+    margin-bottom: 3.5rem;
+  }
+
+  /* CONTACT CARDS */
+  .contact-cards {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 680px;
+  }
+
+  .contact-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--bg3);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+    padding: 1.25rem 1.5rem;
+    text-decoration: none;
+    color: var(--text);
+    transition: border-color 0.2s, transform 0.2s, background 0.2s;
+    flex: 0 0 200px;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .contact-card-info {
+    text-align: left;
+    min-width: 0;
+    overflow: hidden;
+  }
+
+  .contact-card-handle {
+    font-size: 0.72rem;
+    color: var(--muted);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+  }
+
+  .contact-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-3px);
+    background: #1e1e1e;
+  }
+
+  .contact-card-icon {
+    width: 48px; height: 48px;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+  }
+
+  .contact-card-icon svg {
+    width: 26px; height: 26px;
+  }
+
+  .ig-icon { background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+  .wa-icon { background: #25D366; }
+  .gm-icon { background: #f5f5f5; }
+
+  .contact-card:hover .contact-card-name {
+    color: var(--accent);
+  }
+
+  /* BACK LINK */
+  .back-link {
+    margin-top: 3rem;
+    font-size: 0.8rem;
+    color: var(--muted);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    transition: color 0.2s;
+  }
+  .back-link:hover { color: var(--text); }
+
+  /* FOOTER */
+  footer {
+    border-top: 1px solid var(--border);
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-logo {
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--muted);
+  }
+
+  .footer-copy {
+    font-size: 0.72rem;
+    color: var(--muted);
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <a href="portfolio.html" class="nav-logo">
+    <span class="dot"></span>
+    Makkay
+  </a>
+</nav>
+
+<main>
+  <p class="page-label">Contacto</p>
+  <h1 class="page-title">¡<em>Hablemos!</em></h1>
+  <p class="page-sub">Elegí la plataforma que más te resulte cómoda. Respondo en menos de 24 horas.</p>
+
+  <div class="contact-cards">
+
+    <!-- Instagram -->
+    <a href="https://www.instagram.com/makkay_arg/" target="_blank" class="contact-card">
+      <div class="contact-card-icon ig-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <circle cx="12" cy="12" r="4"/>
+          <circle cx="17.5" cy="6.5" r="1" fill="white" stroke="none"/>
+        </svg>
+      </div>
+      <div class="contact-card-info">
+        <div class="contact-card-name">Instagram</div>
+        <div class="contact-card-handle">@makkay_arg</div>
+      </div>
+    </a>
+
+    <!-- WhatsApp -->
+    <a href="https://wa.link/nzdm4i" target="_blank" class="contact-card">
+      <div class="contact-card-icon wa-icon">
+        <svg viewBox="0 0 24 24" fill="white">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </div>
+      <div class="contact-card-info">
+        <div class="contact-card-name">WhatsApp</div>
+        <div class="contact-card-handle">Escribime directo</div>
+      </div>
+    </a>
+
+    <!-- Gmail -->
+    <a href="mailto:makkayeditor@gmail.com" target="_blank" class="contact-card">
+      <div class="contact-card-icon gm-icon">
+        <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+          <path fill="#EA4335" d="M6 40h6V22L4 16v22c0 1.1.9 2 2 2z"/>
+          <path fill="#34A853" d="M36 40h6c1.1 0 2-.9 2-2V16l-8 6z"/>
+          <path fill="#FBBC05" d="M36 10v12l8-6V12c0-2.5-2.8-3.9-4.8-2.4z"/>
+          <path fill="#4285F4" d="M12 22V10l12 9 12-9v12L24 31z"/>
+          <path fill="#C5221F" d="M4 12v4l8 6V10L9.8 8.6C7.8 7.1 4 8.5 4 12z"/>
+        </svg>
+      </div>
+      <div class="contact-card-info">
+        <div class="contact-card-name">Gmail</div>
+        <div class="contact-card-handle">makkayeditor@gmail.com</div>
+      </div>
+    </a>
+
+  </div>
+
+  <a href="portfolio.html" class="back-link">← Volver al portfolio</a>
+</main>
+
+<footer>
+  <span class="footer-logo">Makkay</span>
+  <p class="footer-copy">© 2025. Todos los derechos reservados.</p>
+</footer>
+
+</body>
+</html>
